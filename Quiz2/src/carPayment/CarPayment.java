@@ -36,7 +36,7 @@ public class CarPayment {
 		double denominator = (Math.pow(1 + monthlyRate, this.LengthofLoaninMonths) - 1);
 		
 		double MonthlyPayment = (this.CarCost - this.DownPayment) * (numerator / denominator);
-		
+		// needed to round answers to the cent
 		return Math.round(MonthlyPayment * 100d) / 100d;
 	}
 	
@@ -46,7 +46,7 @@ public class CarPayment {
 		double totalAmountPaid = this.monthlyPayment() * this.LengthofLoaninMonths;
 		
 		double TotalInterest = totalAmountPaid - this.CarCost;
-		
+		// needed to round answers to the cent
 		return Math.round(TotalInterest * 100d) / 100d;
 		
 	}
