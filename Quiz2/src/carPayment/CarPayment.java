@@ -18,12 +18,11 @@ public class CarPayment {
 	}
 	
 	public double monthlyPayment() {
-		double P = this.CarCost;
-		double monthRate = this.InterestRate / 12;
-		double num = (monthRate * (Math.pow(1+monthRate, this.LengthofLoaninMonths)));
-		double denom = (Math.pow(1+monthRate, this.LengthofLoaninMonths) - 1);
-		
-		return P * (num/denom);
+		double monthlyRate = this.InterestRate / 12;
+		double num = (monthlyRate * (Math.pow(1+monthlyRate, this.LengthofLoaninMonths)));
+		double denom = (Math.pow(1+monthlyRate, this.LengthofLoaninMonths) - 1);
+		double MonthlyPayment = (this.CarCost - this.DownPayment) * (num/denom);
+		return MonthlyPayment;
 	}
 	
 	public double totalInterest() {

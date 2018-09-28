@@ -23,7 +23,7 @@ public class CarPaymentTest {
 	public void totalInterest_Test1() {
 		
 		CarPayment testCar = new CarPayment(35000, 0, 60, 0.10);
-		
+		System.out.println(testCar.totalInterest());
 		assertTrue(Math.round(testCar.totalInterest()) == Math.round(9618.79));
 		
 	}
