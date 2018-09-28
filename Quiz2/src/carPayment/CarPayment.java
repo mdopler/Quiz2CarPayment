@@ -27,7 +27,8 @@ public class CarPayment {
 	
 	public double totalInterest() {
 		double nm = this.monthlyPayment() * this.LengthofLoaninMonths;
-		return nm - this.CarCost;
+		double TotalInterest = nm - this.CarCost;
+		return TotalInterest;
 	}
 	
 
