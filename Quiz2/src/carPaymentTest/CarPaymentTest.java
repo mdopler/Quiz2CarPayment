@@ -46,7 +46,7 @@ public class CarPaymentTest {
 		
 		CarPayment testCar = new CarPayment(42000, 5000, 72, 0.12);
 		System.out.println(testCar.totalInterest());
-		assertTrue(testCar.totalInterest() == 10081.92);
+		assertTrue(testCar.totalInterest() == 15081.92);
 		
 	}
 

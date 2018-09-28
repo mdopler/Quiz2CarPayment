@@ -45,7 +45,7 @@ public class CarPayment {
 		
 		double totalAmountPaid = this.monthlyPayment() * this.LengthofLoaninMonths;
 		
-		double TotalInterest = totalAmountPaid - this.CarCost;
+		double TotalInterest = totalAmountPaid - this.CarCost + this.DownPayment;
 		// needed to round answers to the cent
 		return Math.round(TotalInterest * 100d) / 100d;
 		
